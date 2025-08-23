@@ -1,0 +1,4 @@
+Java I/O is powerful!
+Learn Java step-by-step.
+This file has multiple lines.
+Text analytics using file I/O.

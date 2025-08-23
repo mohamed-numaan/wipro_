@@ -1,0 +1,21 @@
+Customer: Mohamed Numaan | Email: numaan123@gmail.com
+Product: iPhone 15 | ID: P1001 | Price: ₹79999.0
+Product: Rich Dad Poor Dad | ID: B1003 | Price: ₹399.0
+Total: ₹80398.0
+Status: Confirmed
+----------
+Customer: Alan | Email: Alan@gmail.com
+Product: iPhone 15 | ID: P1001 | Price: ₹79999.0
+Total: ₹79999.0
+Status: Confirmed
+----------
+Customer: bob | Email: bob@gmail.com
+Product: iPhone 15 | ID: P1001 | Price: ₹79999.0
+Total: ₹79999.0
+Status: Confirmed
+----------
+Customer: AAA | Email: aaa@gmaill.com
+Product: Wooden Chair | ID: F1004 | Price: ₹2499.0
+Total: ₹2499.0
+Status: Confirmed
+----------
