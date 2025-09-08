@@ -1,4 +1,5 @@
-# Insurance Policy Management System
+# WIPRO CAPSTONE PROJECT
+Insurance Policy Management System
 
 A comprehensive web-based **Insurance Policy Management System** built using **Spring Boot**, designed to manage insurance policies, user authentication, claims processing, and policy renewals efficiently.
 
