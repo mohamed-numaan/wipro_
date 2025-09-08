@@ -19,3 +19,9 @@ Product: Wooden Chair | ID: F1004 | Price: ₹2499.0
 Total: ₹2499.0
 Status: Confirmed
 ----------
+Customer: Mohamed  | Email: mohamed@gmail.com
+Product: iPhone 15 | ID: P1001 | Price: ₹79999.0
+Product: Polo T-shirt | ID: C1002 | Price: ₹1499.0
+Total: ₹81498.0
+Status: Confirmed
+----------

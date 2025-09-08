@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-InsuranceAutomationSuite" class="navigator-link">
+              <span class="suite-name border-failed">InsuranceAutomationSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>C:\Users\shafi\eclipse-workspace\InsurancePolicyManagementSystem\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-InsuranceAutomationSuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-InsuranceAutomationSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">9 methods, 2 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-InsuranceAutomationSuite" class="hide-methods failed suite-InsuranceAutomationSuite"> (hide)</a> <!-- hide-methods failed suite-InsuranceAutomationSuite -->
+                      <a href="#" panel-name="suite-InsuranceAutomationSuite" class="show-methods failed suite-InsuranceAutomationSuite"> (show)</a> <!-- show-methods failed suite-InsuranceAutomationSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-InsuranceAutomationSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="Logout">Logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="claimsProcessingTest">claimsProcessingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-InsuranceAutomationSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-InsuranceAutomationSuite" class="hide-methods passed suite-InsuranceAutomationSuite"> (hide)</a> <!-- hide-methods passed suite-InsuranceAutomationSuite -->
+                      <a href="#" panel-name="suite-InsuranceAutomationSuite" class="show-methods passed suite-InsuranceAutomationSuite"> (show)</a> <!-- show-methods passed suite-InsuranceAutomationSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-InsuranceAutomationSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="loginInvalidTest">loginInvalidTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="loginValidTest">loginValidTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="policyCreationTest(Health Insurance, John Doe, 30.0, 10000.0, 1 year)">policyCreationTest(Health Insurance, John Doe, 30.0, 10000.0, 1 year)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="policyCreationTest(Life Insurance, Alice Smith, 45.0, 50000.0, 5 Years)">policyCreationTest(Life Insurance, Alice Smith, 45.0, 50000.0, 5 Years)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="policyCreationTest(Vehicle Insurance, Bob Johnson, 28.0, 15000.0, 5 Years)">policyCreationTest(Vehicle Insurance, Bob Johnson, 28.0, 15000.0, 5 Years)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="policyRenewalTest">policyRenewalTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-InsuranceAutomationSuite" title="testcases.Tests" class="method navigator-link" hash-for-method="premiumCalculationTest">premiumCalculationTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-InsuranceAutomationSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-InsuranceAutomationSuite" class="panel InsuranceAutomationSuite">
+          <div class="suite-InsuranceAutomationSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.Tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Logout">
+                  </a> <!-- Logout -->
+                  <span class="method-name">Logout</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;logout-btn&quot; class=&quot;bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-200 shadow-md&quot;&gt;...&lt;/button&gt; is not clickable at point (1134, 20). Other element would receive the click: &lt;div id=&quot;payment-modal&quot; class=&quot;fixed inset-0 bg-gray-600 bg-opacity-50 items-center justify-center p-4 flex&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=139.0.7258.155)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c005c80dc4ef1459699a45efbb33e33, clickElement {id=f.5D196DD068198429423FFF47754067B2.d.E7738690FA0F028B334694604127694F.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\WINDOWS\TEMP\scoped_dir2...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57851}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57851/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1c005c80dc4ef1459699a45efbb33e33)] -&gt; id: logout-btn]
+Session ID: 1c005c80dc4ef1459699a45efbb33e33
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at testcases.Tests.Logout(Tests.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="claimsProcessingTest">
+                  </a> <!-- claimsProcessingTest -->
+                  <span class="method-name">claimsProcessingTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at testcases.Tests.claimsProcessingTest(Tests.java:123)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-InsuranceAutomationSuite-class-failed -->
+          <div class="suite-InsuranceAutomationSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.Tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginInvalidTest">
+                  </a> <!-- loginInvalidTest -->
+                  <span class="method-name">loginInvalidTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginValidTest">
+                  </a> <!-- loginValidTest -->
+                  <span class="method-name">loginValidTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="policyCreationTest(Health Insurance, John Doe, 30.0, 10000.0, 1 year)">
+                  </a> <!-- policyCreationTest(Health Insurance, John Doe, 30.0, 10000.0, 1 year) -->
+                  <span class="method-name">policyCreationTest</span>
+                  <span class="parameters">(Health Insurance,John Doe,30.0,10000.0,1 year)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="policyCreationTest(Life Insurance, Alice Smith, 45.0, 50000.0, 5 Years)">
+                  </a> <!-- policyCreationTest(Life Insurance, Alice Smith, 45.0, 50000.0, 5 Years) -->
+                  <span class="method-name">policyCreationTest</span>
+                  <span class="parameters">(Life Insurance,Alice Smith,45.0,50000.0,5 Years)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="policyCreationTest(Vehicle Insurance, Bob Johnson, 28.0, 15000.0, 5 Years)">
+                  </a> <!-- policyCreationTest(Vehicle Insurance, Bob Johnson, 28.0, 15000.0, 5 Years) -->
+                  <span class="method-name">policyCreationTest</span>
+                  <span class="parameters">(Vehicle Insurance,Bob Johnson,28.0,15000.0,5 Years)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="policyRenewalTest">
+                  </a> <!-- policyRenewalTest -->
+                  <span class="method-name">policyRenewalTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="premiumCalculationTest">
+                  </a> <!-- premiumCalculationTest -->
+                  <span class="method-name">premiumCalculationTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-InsuranceAutomationSuite-class-passed -->
+        </div> <!-- panel InsuranceAutomationSuite -->
+        <div panel-name="test-xml-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\shafi\eclipse-workspace\InsurancePolicyManagementSystem\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;InsuranceAutomationSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;PolicyTests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.Tests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- PolicyTests --&gt;
+&lt;/suite&gt; &lt;!-- InsuranceAutomationSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for InsuranceAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">PolicyTests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for InsuranceAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for InsuranceAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_InsuranceAutomationSuite');
+function tableData_InsuranceAutomationSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(9);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Logout')
+data.setCell(0, 2, 'testcases.Tests')
+data.setCell(0, 3, 11295);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'policyCreationTest')
+data.setCell(1, 2, 'testcases.Tests')
+data.setCell(1, 3, 3442);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'policyCreationTest')
+data.setCell(2, 2, 'testcases.Tests')
+data.setCell(2, 3, 2901);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'policyCreationTest')
+data.setCell(3, 2, 'testcases.Tests')
+data.setCell(3, 3, 2876);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'premiumCalculationTest')
+data.setCell(4, 2, 'testcases.Tests')
+data.setCell(4, 3, 657);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginInvalidTest')
+data.setCell(5, 2, 'testcases.Tests')
+data.setCell(5, 3, 630);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'claimsProcessingTest')
+data.setCell(6, 2, 'testcases.Tests')
+data.setCell(6, 3, 609);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'loginValidTest')
+data.setCell(7, 2, 'testcases.Tests')
+data.setCell(7, 3, 483);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'policyRenewalTest')
+data.setCell(8, 2, 'testcases.Tests')
+data.setCell(8, 3, 165);
+window.suiteTableData['InsuranceAutomationSuite']= { tableData: data, tableDiv: 'times-div-InsuranceAutomationSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <div id="times-div-InsuranceAutomationSuite">
+              </div> <!-- times-div-InsuranceAutomationSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for InsuranceAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-InsuranceAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.Tests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupReport</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">451 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">loginInvalidTest</span>
+                <span class="method-start">4047 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=loginInvalidTest status=SUCCESS method=Tests.loginInvalidTest()[pri:1, instance:tes...)</span>
+                <span class="method-start">4682 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">loginValidTest</span>
+                <span class="method-start">4690 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=loginValidTest status=SUCCESS method=Tests.loginValidTest()[pri:2, instance:testcas...)</span>
+                <span class="method-start">5186 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">policyCreationTest(Health Insurance, John Doe, 30.0, 10000.0, 1 year)</span>
+                <span class="method-start">6253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=policyCreationTest status=SUCCESS method=Tests.policyCreationTest(java.lang.String,...)</span>
+                <span class="method-start">9699 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">policyCreationTest(Life Insurance, Alice Smith, 45.0, 50000.0, 5 Years)</span>
+                <span class="method-start">9699 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=policyCreationTest status=SUCCESS method=Tests.policyCreationTest(java.lang.String,...)</span>
+                <span class="method-start">12578 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">policyCreationTest(Vehicle Insurance, Bob Johnson, 28.0, 15000.0, 5 Years)</span>
+                <span class="method-start">12579 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=policyCreationTest status=SUCCESS method=Tests.policyCreationTest(java.lang.String,...)</span>
+                <span class="method-start">15483 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">premiumCalculationTest</span>
+                <span class="method-start">15485 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=premiumCalculationTest status=SUCCESS method=Tests.premiumCalculationTest()[pri:4, ...)</span>
+                <span class="method-start">16144 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">claimsProcessingTest</span>
+                <span class="method-start">16146 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=claimsProcessingTest status=FAILURE method=Tests.claimsProcessingTest()[pri:5, inst...)</span>
+                <span class="method-start">16761 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">policyRenewalTest</span>
+                <span class="method-start">16763 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=policyRenewalTest status=SUCCESS method=Tests.policyRenewalTest()[pri:6, instance:t...)</span>
+                <span class="method-start">16930 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Logout</span>
+                <span class="method-start">16931 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureScreenshotOnFailure([TestResult name=Logout status=FAILURE method=Tests.Logout()[pri:7, instance:testcases.Tests@2ed2d9c...)</span>
+                <span class="method-start">28231 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">28235 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeReport</span>
+                <span class="method-start">28768 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

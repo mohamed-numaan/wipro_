@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         <modelVersion>4.0.0</modelVersion>
+         <!-- The parent project manages dependencies for us, ensuring compatibility. -->
+         
+         <parent>
+         	<groupId>org.springframework.boot</groupId>
+         	<artifactId>spring-boot-starter-parent</artifactId>
+        	<version>3.2.5</version>
+        	<relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    
+    <!-- Project-specific information -->
+    <groupId>com.insurance</groupId>
+    	<artifactId>policy-management</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<name>insurance-policy-management</name>
+    	<description>Capstone project for insurance policy management system</description>
+    	<packaging>jar</packaging>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <selenium.version>4.23.0</selenium.version>
+        <testng.version>7.10.2</testng.version>
+        <wdm.version>5.9.2</wdm.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Spring Boot Web and Test dependencies for the backend application -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- SpringFramework-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- Selenium for browser automation -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        
+        <!-- WebDriverManager for automatic WebDriver setup -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${wdm.version}</version>
+        </dependency>
+        
+        <!-- TestNG framework for test execution -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+        
+        <!-- Apache POI for reading/writing Excel files for data-driven testing -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+		
+		<!-- TestNG -->
+    	<dependency>
+        	<groupId>org.testng</groupId>
+        	<artifactId>testng</artifactId>
+        	<version>7.10.2</version>
+        	<scope>test</scope>
+    	</dependency>
+
+    	<!-- ExtentReports -->
+    	<dependency>
+        	<groupId>com.aventstack</groupId>
+        	<artifactId>extentreports</artifactId>
+        	<version>5.0.9</version>
+    	</dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven plugin to package the application as an executable JAR -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

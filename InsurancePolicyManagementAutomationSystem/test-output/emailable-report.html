@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">InsuranceAutomationSuite</th></tr>
+<tr><td><a href="#t0">PolicyTests</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">28,272</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">InsuranceAutomationSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PolicyTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testcases.Tests</td><td><a href="#m0">Logout</a></td><td rowspan="1">1757340903911</td><td rowspan="1">11295</td></tr><tr class="failedeven"><td><a href="#m1">claimsProcessingTest</a></td><td rowspan="1">1757340903126</td><td rowspan="1">609</td></tr><tr><th colspan="4">PolicyTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">testcases.Tests</td><td><a href="#m2">loginInvalidTest</a></td><td rowspan="1">1757340891027</td><td rowspan="1">630</td></tr><tr class="passedeven"><td><a href="#m3">loginValidTest</a></td><td rowspan="1">1757340891670</td><td rowspan="1">483</td></tr><tr class="passedeven"><td><a href="#m4">policyCreationTest</a></td><td rowspan="3">1757340893233</td><td rowspan="3">3442</td></tr><tr class="passedeven"><td><a href="#m5">policyCreationTest</a></td></tr><tr class="passedeven"><td><a href="#m6">policyCreationTest</a></td></tr><tr class="passedeven"><td><a href="#m7">policyRenewalTest</a></td><td rowspan="1">1757340903743</td><td rowspan="1">165</td></tr><tr class="passedeven"><td><a href="#m8">premiumCalculationTest</a></td><td rowspan="1">1757340902465</td><td rowspan="1">657</td></tr></tbody>
+</table>
+<h2>PolicyTests</h2><h3 id="m0">testcases.Tests#Logout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;logout-btn&quot; class=&quot;bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-200 shadow-md&quot;&gt;...&lt;/button&gt; is not clickable at point (1134, 20). Other element would receive the click: &lt;div id=&quot;payment-modal&quot; class=&quot;fixed inset-0 bg-gray-600 bg-opacity-50 items-center justify-center p-4 flex&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=139.0.7258.155)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c005c80dc4ef1459699a45efbb33e33, clickElement {id=f.5D196DD068198429423FFF47754067B2.d.E7738690FA0F028B334694604127694F.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\WINDOWS\TEMP\scoped_dir2...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57851}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57851/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1c005c80dc4ef1459699a45efbb33e33)] -&gt; id: logout-btn]
+Session ID: 1c005c80dc4ef1459699a45efbb33e33
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at testcases.Tests.Logout(Tests.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testcases.Tests#claimsProcessingTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at testcases.Tests.claimsProcessingTest(Tests.java:123)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testcases.Tests#loginInvalidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testcases.Tests#loginValidTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testcases.Tests#policyCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Health Insurance</td><td>John Doe</td><td>30.0</td><td>10000.0</td><td>1 year</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testcases.Tests#policyCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Life Insurance</td><td>Alice Smith</td><td>45.0</td><td>50000.0</td><td>5 Years</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testcases.Tests#policyCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>Vehicle Insurance</td><td>Bob Johnson</td><td>28.0</td><td>15000.0</td><td>5 Years</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testcases.Tests#policyRenewalTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testcases.Tests#premiumCalculationTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

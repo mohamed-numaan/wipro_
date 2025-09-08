@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Policy Management</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #f3f4f6;
+}
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+	<div id="app-container"
+		class="bg-white rounded-xl shadow-2xl w-full max-w-4xl p-8 transform transition-all duration-500 ease-in-out">
+		<h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Insurance
+			Policy Management System</h1>
+
+		<!-- Login -->
+		<div id="login-section" class="flex flex-col items-center">
+			<h2 class="text-2xl font-semibold text-gray-700 mb-4">User Login</h2>
+			<form id="login-form" class="w-full max-w-sm space-y-4">
+				<div>
+					<input type="text" id="username" placeholder="Username"
+						class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-200">
+				</div>
+				<div>
+					<input type="password" id="password" placeholder="Password"
+						class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-200">
+				</div>
+				<button type="submit"
+					class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200 shadow-md">Login</button>
+			</form>
+			<p id="login-message" class="mt-4 text-sm text-red-500"></p>
+		</div>
+
+		<!-- Dashboard -->
+		<div id="app-dashboard" class="hidden">
+			<div
+				class="flex flex-col md:flex-row justify-between items-center mb-6">
+				<h2 class="text-2xl font-semibold text-gray-700">
+					Welcome, <span id="welcome-user"></span>!
+				</h2>
+				<div class="flex space-x-2 mt-4 md:mt-0">
+					<button id="logout-btn"
+						class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-200 shadow-md">Logout</button>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<!-- New Policy -->
+				<div
+					class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200">
+					<h3 class="text-xl font-semibold text-gray-800 mb-4">New
+						Policy Creation</h3>
+					<form id="policy-form" class="space-y-4">
+						<select id="policy-type"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+							<option value="">Select Policy Type</option>
+							<option value="Health">Health Insurance</option>
+							<option value="Life">Life Insurance</option>
+							<option value="Vehicle">Vehicle Insurance</option>
+						</select> 
+						<input type="text" id="policy-name" placeholder="fullname"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+						<input type="number" id="policy-age" placeholder="Age"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+						<input type="number" id="policy-coverage"
+							placeholder="Coverage Amount (₹)"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+
+						<!-- NEW DROPDOWN for Duration -->
+						<select id="policy-duration"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+							<option value="">Select Duration</option>
+							<option value="1">1 Year</option>
+							<option value="5">5 Years</option>
+						</select>
+
+						<div class="flex space-x-2">
+							<button type="button" id="calculate-premium-btn"
+								class="flex-1 bg-green-500 text-white font-semibold py-2 rounded-lg hover:bg-green-600 transition duration-200 shadow-md">Calculate
+								Premium</button>
+							<button type="submit"
+								class="flex-1 bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200 shadow-md">Create
+								Policy</button>
+						</div>
+					</form>
+					<p id="premium-result"
+						class="mt-4 text-center text-lg font-bold text-gray-700"></p>
+				</div>
+
+				<!-- Claims -->
+				<div
+					class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200">
+					<h3 class="text-xl font-semibold text-gray-800 mb-4">Claims
+						Submission</h3>
+					<form id="claims-form" class="space-y-4">
+						<input type="text" id="claim-policy-number"
+							placeholder="Policy Number"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+						<textarea id="claim-description"
+							placeholder="Description of Claim" rows="3"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg"></textarea>
+						<button type="submit"
+							class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200 shadow-md">Submit
+							Claim</button>
+					</form>
+					<p id="claim-status" class="mt-4 text-center text-sm text-gray-600"></p>
+				</div>
+
+				<!-- Policy List -->
+				<div
+					class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200">
+					<h3 class="text-xl font-semibold text-gray-800 mb-4">Policy
+						Created</h3>
+					<div id="policy-list" class="space-y-3">
+						<div class="text-center text-gray-500">Loading policies...</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Claimed Policies -->
+			<div
+				class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200 mt-6">
+				<h3 class="text-xl font-semibold text-gray-800 mb-4">Claimed
+					Policies</h3>
+				<div id="claimed-list" class="space-y-3">
+					<div class="text-center text-gray-500">No claimed policies
+						yet.</div>
+				</div>
+			</div>
+
+			<!-- Expired Policies -->
+			<div
+				class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200 mt-6">
+				<h3 class="text-xl font-semibold text-gray-800 mb-4">Renew
+					Expired Policies</h3>
+				<div id="renewal-list" class="space-y-3">
+					<div
+						class="p-4 rounded-lg shadow-sm border bg-red-50 border-red-200">
+						<p class="font-semibold text-gray-800">Policy #V1001</p>
+						<p class="text-sm text-gray-600">Type: Vehicle Insurance</p>
+						<p class="text-sm text-gray-600">Start Date: 2024-09-06</p>
+						<p class="text-sm text-gray-600">Expiry Date: 2025-09-01</p>
+						<p class="text-sm font-bold mt-1 text-red-600">Status: Expired</p>
+						<button data-policy-id="V1001"
+							class="renew-btn mt-3 bg-indigo-500 text-white text-xs px-3 py-1 rounded-full hover:bg-indigo-600 transition duration-200">Renew</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Renewed List -->
+			<div
+				class="bg-gray-100 rounded-lg p-6 shadow-sm border border-gray-200 mt-6">
+				<h3 class="text-xl font-semibold text-gray-800 mb-4">Renewal
+					List</h3>
+				<div id="renewed-list" class="space-y-3"></div>
+			</div>
+
+			<!-- Payment Modal -->
+			<div id="payment-modal"
+				class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center p-4">
+				<div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+					<div class="flex justify-between items-center mb-4">
+						<h3 id="modal-title" class="text-xl font-bold text-gray-800">Mock
+							Payment Gateway</h3>
+						<button id="close-payment-modal"
+							class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+					</div>
+					<form id="payment-form" class="space-y-4">
+						<div>
+							<input type="text" id="card-number" placeholder="Card Number"
+								class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+						</div>
+						<div class="flex space-x-2">
+							<input type="text" id="expiry-month" placeholder="MM"
+								class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg">
+							<input type="text" id="expiry-year" placeholder="YYYY"
+								class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg">
+						</div>
+						<div>
+							<input type="text" id="cvc" placeholder="CVC"
+								class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+						</div>
+						<button type="submit"
+							class="w-full bg-purple-600 text-white font-semibold py-2 rounded-lg hover:bg-purple-700 transition duration-200 shadow-md">Pay
+							Now</button>
+					</form>
+					<p id="payment-status"
+						class="mt-4 text-center text-sm text-gray-600"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const BASE_URL = 'http://localhost:8080/api';
+	const loginSection = document.getElementById('login-section');
+	const appDashboard = document.getElementById('app-dashboard');
+	const welcomeUser = document.getElementById('welcome-user');
+	const loginForm = document.getElementById('login-form');
+	const loginMessage = document.getElementById('login-message');
+	const logoutBtn = document.getElementById('logout-btn');
+	const policyForm = document.getElementById('policy-form');
+	const claimsForm = document.getElementById('claims-form');
+	const calculatePremiumBtn = document.getElementById('calculate-premium-btn');
+	const premiumResult = document.getElementById('premium-result');
+	const claimStatus = document.getElementById('claim-status');
+	const policyList = document.getElementById('policy-list');
+	const renewalListDiv = document.getElementById("renewal-list");
+	const claimedList = document.getElementById("claimed-list");
+	const renewedListDiv = document.getElementById("renewed-list");
+	const paymentModal = document.getElementById('payment-modal');
+	const closePaymentModalBtn = document.getElementById('close-payment-modal');
+	const paymentForm = document.getElementById('payment-form');
+	const paymentStatus = document.getElementById('payment-status');
+	
+	const showMessage = (title, message, isPayment = false) => {
+		document.getElementById('modal-title').textContent = title;
+		document.getElementById('payment-form').classList.toggle('hidden', !isPayment);
+		paymentForm.reset();
+		paymentStatus.textContent = "";
+		paymentStatus.textContent = message;
+		paymentModal.classList.remove('hidden');
+		paymentModal.classList.add('flex');
+	};
+
+	const fetchPolicies = async () => {
+		policyList.innerHTML = '<div class="text-center text-gray-500">Loading policies...</div>';
+		try {
+			const response = await fetch(`${BASE_URL}/policies`);
+			if (!response.ok) throw new Error('Network error');
+			const policies = await response.json();
+			if (policies.length === 0) {
+				policyList.innerHTML = '<div class="text-center text-gray-500">No policies found.</div>';
+				return;
+			}
+			policyList.innerHTML = '';
+			policies.forEach(policy => {
+				const policyCard = document.createElement('div');
+				const statusColor = policy.status === 'Expired' ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200';
+				const statusTextColor = policy.status === 'Expired' ? 'text-red-600' : 'text-green-600';
+				policyCard.className = `p-4 rounded-lg shadow-sm border ${statusColor}`;
+				policyCard.innerHTML = `
+					<p class="font-semibold text-gray-800">Policy #${policy.policyId}</p>
+					<p class="text-sm text-gray-600">Type: ${policy.policyType}</p>
+					<p class="text-sm ${statusTextColor} font-bold mt-1">Status: ${policy.status}</p>
+					<p class="text-sm text-gray-600">Start Date: ${policy.startDate || '-'}</p>
+					<p class="text-sm text-gray-600">Expiry Date: ${policy.expiryDate || '-'}</p>
+					${policy.status === 'Expired' ? `<button data-policy-id="${policy.policyId}" class="renew-btn mt-3 bg-indigo-500 text-white text-xs px-3 py-1 rounded-full hover:bg-indigo-600">Renew</button>` : ''}
+				`;
+				policyList.appendChild(policyCard);
+			});
+		} catch (error) {
+			policyList.innerHTML = `<div class="text-center text-red-500">Failed to load policies.</div>`;
+		}
+	};
+	
+	//loginbtn
+	loginForm.addEventListener('submit', (e) => {
+		e.preventDefault();
+		const username = document.getElementById('username').value;
+		const password = document.getElementById('password').value;
+		if (username === 'Mohamed Numaan' && password === 'Numaan123') {
+			loginSection.classList.add('hidden');
+			appDashboard.classList.remove('hidden');
+			welcomeUser.textContent = 'Mohamed Numaan';
+			fetchPolicies();
+		} else {
+			loginMessage.textContent = 'Invalid username or password.';
+		}
+	});
+	
+	//logoutbtn
+	logoutBtn.addEventListener('click', () => {
+		appDashboard.classList.add('hidden');
+		loginSection.classList.remove('hidden');
+		document.getElementById('username').value = '';
+		document.getElementById('password').value = '';
+		loginMessage.textContent = 'Logged out successfully.';
+	});
+	
+	//premium
+	calculatePremiumBtn.addEventListener('click', async () => {
+		const policyType = document.getElementById('policy-type').value;
+		const age = document.getElementById('policy-age').value;
+		const fullName = document.getElementById('policy-name').value;
+		const coverage = document.getElementById('policy-coverage').value;
+		const duration = document.getElementById('policy-duration').value;
+		if (!policyType || !fullName|| !age || !coverage || !duration) {
+			premiumResult.textContent = 'Please fill all fields.';
+			return;
+		}
+		premiumResult.textContent = 'Calculating...';
+		try {
+			const response = await fetch(`${BASE_URL}/premiums/calculate?type=${policyType}&age=${parseInt(age)}&coverage=${parseFloat(coverage)}&duration=${duration}`);
+			if (!response.ok) throw new Error('Failed to calculate.');
+			const result = await response.json();
+			premiumResult.textContent = `Estimated Premium: ₹${result.toFixed(2)}`;
+		} catch (error) {
+			premiumResult.textContent = `Error: ${error.message}`;
+		}
+	});
+
+	// Store submitted claims
+	let claimsData = [];
+	claimsForm.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const policyNumber = document.getElementById('claim-policy-number').value;
+		const description = document.getElementById('claim-description').value;
+		if (!policyNumber || !description) {
+			claimStatus.textContent = 'Please fill all claim details.';
+			return;
+		}
+		const existingClaim = claimsData.find(claim => claim.policyNumber === policyNumber);
+		if (existingClaim) {
+			claimStatus.textContent = `Policy #${policyNumber} is already claimed.`;
+			return;
+		}
+		claimStatus.textContent = 'Submitting claim...';
+		try {
+			const response = await fetch(`${BASE_URL}/claims/${policyNumber}`, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ description })
+			});
+			const responseText = await response.text();
+			if (!response.ok) throw new Error(responseText || 'Failed to submit claim.');
+			const newClaim = { id: Date.now(), policyNumber, description, status: "Pending" };
+			claimsData.push(newClaim);
+			renderClaims();
+			claimsForm.reset();
+			claimStatus.textContent = "Claim submitted successfully!";
+			setTimeout(() => { newClaim.status = "Approved"; renderClaims(); }, 5000);
+		} catch (error) {
+			claimStatus.textContent = `Error: ${error.message}`;
+		}
+	});
+
+	function renderClaims() {
+		claimedList.innerHTML = "";
+		if (claimsData.length === 0) {
+			claimedList.innerHTML = `<div class="text-center text-gray-500">No claimed policies yet.</div>`;
+			return;
+		}
+		claimsData.forEach(claim => {
+			const claimCard = document.createElement("div");
+			const statusColor = claim.status === "Approved" ? "text-green-600" : "text-yellow-600";
+			claimCard.className = "p-4 rounded-lg shadow-sm border bg-white border-gray-200";
+			claimCard.innerHTML = `
+				<p class="font-semibold text-gray-800">Policy #${claim.policyNumber}</p>
+				<p class="text-sm text-gray-600">Description: ${claim.description}</p>
+				<p class="text-sm font-bold ${statusColor}">Status: ${claim.status}</p>
+			`;
+			claimedList.appendChild(claimCard);
+		});
+	}
+
+	// Validate payment fields
+	function validatePayment() {
+
+		const cardNumber = document.getElementById('card-number').value.trim();
+		const month = parseInt(document.getElementById('expiry-month').value);
+		const year = parseInt(document.getElementById('expiry-year').value);
+		const cvc = document.getElementById('cvc').value.trim();
+		if (!/^\d{12}$/.test(cardNumber)) return "Invalid card number. Must be exactly 12 digits.";
+		if (isNaN(month) || month < 1 || month > 12) return "Invalid expiry month. Must be 1-12.";
+		if (isNaN(year) || year <2024) return "Invalid expiry year. Must be 2025 or later.";
+		if (!/^\d{3,4}$/.test(cvc)) return "Invalid CVC. Must be 3 or 4 digits.";
+		return null;
+	}
+
+	// Create policy with payment
+	policyForm.addEventListener('submit', (e) => {
+		e.preventDefault();
+		const policyType = document.getElementById('policy-type').value;
+		const age = document.getElementById('policy-age').value;
+		const coverage = document.getElementById('policy-coverage').value;
+		const duration = document.getElementById('policy-duration').value;
+		const fullName = document.getElementById('policy-name').value;
+		if (!policyType || !age ||!fullName || !coverage || !duration) {
+			showMessage("Error", "Please fill out all policy details.");
+			return;
+		}
+		showMessage("Mock Payment Gateway", "Complete payment to create policy.", true);
+
+		const handlePaymentSubmit = async function(event) {
+			event.preventDefault();
+			const validationError = validatePayment();
+			if (validationError) {
+				paymentStatus.textContent = validationError;
+				return;
+			}
+			paymentStatus.textContent = "Processing payment...";
+			try {
+				const response = await fetch(`${BASE_URL}/policies`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ policyType, fullName, age: parseInt(age), coverage: parseFloat(coverage),duration})
+				});
+				if (!response.ok) throw new Error('Failed to create policy.');
+				const newPolicy = await response.json();
+				paymentStatus.textContent = `Payment successful! Policy created. ID: ${newPolicy.policyId}`;
+				policyForm.reset();
+				premiumResult.textContent = '';
+				fetchPolicies();
+				setTimeout(() => { paymentModal.classList.add('hidden'); }, 1500);
+			} catch (error) {
+				paymentStatus.textContent = `Error: ${error.message}`;
+			}
+			paymentForm.removeEventListener('submit', handlePaymentSubmit);
+		};
+		paymentForm.addEventListener('submit', handlePaymentSubmit);
+	});
+
+	// Renew expired policies with payment
+	renewalListDiv.addEventListener("click", (e) => {
+		if (e.target.classList.contains("renew-btn")) {
+			const policyCard = e.target.closest("div");
+			const policyId = e.target.dataset.policyId;
+			showMessage("Mock Payment Gateway", "Complete payment to renew policy.", true);
+
+			const handleRenewPayment = function(event) {
+				event.preventDefault();
+				const validationError = validatePayment();
+				if (validationError) {
+					paymentStatus.textContent = validationError;
+					return;
+				}
+				paymentStatus.textContent = "Processing payment...";
+				policyCard.remove();
+				const today = new Date();
+				const nextYear = new Date(today);
+				nextYear.setFullYear(today.getFullYear() + 1);
+				const startDate = today.toISOString().split("T")[0];
+				const expiryDate = nextYear.toISOString().split("T")[0];
+
+				const renewedCard = document.createElement("div");
+				renewedCard.className = "p-4 rounded-lg shadow-sm border bg-green-50 border-green-200";
+				renewedCard.innerHTML = `
+					<p class="font-semibold text-gray-800">Policy #${policyId}</p>
+					<p class="text-sm text-gray-600">Type: Vehicle Insurance</p>
+					<p class="text-sm text-gray-600">Start Date: ${startDate}</p>
+					<p class="text-sm text-gray-600">Expiry Date: ${expiryDate}</p>
+					<p class="text-sm font-bold mt-1 text-green-600">Status: Renewed</p>
+				`;
+				renewedListDiv.appendChild(renewedCard);
+
+				paymentStatus.textContent = "Payment successful! Policy renewed.";
+				setTimeout(() => { paymentModal.classList.add('hidden'); }, 1500);
+				paymentForm.removeEventListener('submit', handleRenewPayment);
+			};
+			paymentForm.addEventListener('submit', handleRenewPayment);
+		}
+	});
+
+	closePaymentModalBtn.addEventListener('click', () => {
+		paymentModal.classList.add('hidden');
+	});
+});
+</script>
+</body>
+</html>
