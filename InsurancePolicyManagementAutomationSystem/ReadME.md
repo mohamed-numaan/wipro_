@@ -8,16 +8,7 @@ A comprehensive web-based **Insurance Policy Management System** built using **S
 
 - [Project Overview](#project-overview)  
 - [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Setup and Installation](#setup-and-installation)  
-- [Usage](#usage)  
-  - [Login](#login)  
-  - [Creating a Policy](#creating-a-policy)  
-  - [Claiming a Policy](#claiming-a-policy)  
-  - [Policy Renewal](#policy-renewal)  
-- [Testing](#testing)  
-- [Notes](#notes)  
-- [Author](#author)  
+- [Technologies Used](#technologies-used)   
 
 ---
 
@@ -32,13 +23,9 @@ This project is a **Spring Boot** application for managing insurance policies. I
 - Renew policies and make payments  
 - Track all policies and claims efficiently  
 
-The system is designed with modularity in mind and supports file handling, UI automation tests, and integration with Selenium-based test cases.
-
----
-
 ## Features
 
-- **User Authentication** – Secure login with username and password.  
+- **User Authentication** – login with username("Mohamed Numaan") and password("Numaan27").  
 - **Policy Management** – Create, view, and manage insurance policies.  
 - **Premium Calculation** – Automatically calculates estimated premiums based on policy details.  
 - **Claims Processing** – Submit claims for existing policies using their `policyID`.  
@@ -51,7 +38,6 @@ The system is designed with modularity in mind and supports file handling, UI au
 
 - **Backend:** Spring Boot, Java  
 - **Frontend:** HTML, CSS, JavaScript  
-- **Database:** H2/MySQL (based on your configuration)  
 - **Testing:** Selenium WebDriver, TestNG, Extent Reports  
 - **Build Tool:** Maven  
 
